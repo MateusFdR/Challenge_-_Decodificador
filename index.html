@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+</head>
+
+<body class="corpo">
+    <header class="cabecalho">
+        <div class="cabecalho__icone">
+            <img class="desbloquear" src="assets/desbloquear.png" alt="desbloquear">
+        </div>
+        <span class="cabecalho__titulo">Decrypt<strong class="sublinhado">.text</strong></span>
+    </header>
+
+    <main class="conteudo">
+        <section class="conteudo__texto__inserido">
+            <textarea class="texto__inserido" placeholder="Digite seu texto"></textarea>
+            <div class="conteudo__alerta__botao">
+                <div class="alerta">
+                    <p class="alerta__informacao">Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div class="botao__texto__inserido">
+                    <button class="criptografar" onclick="criptografar()">Criptografar</button>
+                    <button class="descriptografar" onclick="descriptografar()">Descriptografar</button>
+                </div>
+            </div>
+        </section>
+        <section class="conteudo__texto__exibido">
+            <div class="conteudo__sem__retorno">
+                <img class="img__procurando" src="assets/procurando.svg" alt="Ilustração de busca">
+                <div class="conteudo__titulo__texto">
+                    <h3 class="titulo__sem__retorno">Nenhuma mensagem encontrada</h3>
+                    <p class="texto__sem__retorno">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+            </div>
+            <div class="conteudo__retorno">
+                <textarea class="texto__exibido"></textarea>
+                <div class="botao__texto__exibido">
+                    <button class="copiar">Copiar</button>
+                    <button class="limpar" onclick="limpar()">Limpar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p class="rodape__texto">© 2024 Mateus Faria. Desenvolvedor.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
